@@ -1,6 +1,6 @@
 {
   "name": "@magiclab/vrt-runner",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "description": "VRT runner and result generator for images",
   "main": "build/index.js",
   "repository": "https://github.com/badoo/vrt-runner",
@@ -37,7 +37,7 @@
     "tsc:lint": "tsc --incremental --noEmit false",
     "test:clean": "rm -rf tmp/result",
     "test": "npm run build && npm run test:clean && node build/bin.js --cwd test/1 --output tmp/result",
-    "test:debug": "npm run build && devtool build/bin.js --cwd test/1/ --output tmp/result/",
+    "test:debug": "npm run build && node --inspect --inspect-brk build/bin.js --cwd test/1/ --output tmp/result/",
     "prepublish": "npm run build"
   },
   "dependencies": {
